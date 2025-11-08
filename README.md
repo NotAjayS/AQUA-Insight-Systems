@@ -2,7 +2,7 @@
 
 A web-based **Smart Water Management Dashboard** that helps monitor and manage water resources efficiently.
 
-**Live Demo:** [https://smartwatermanagement-35fab.web.app](https://smartwatermanagement-35fab.web.app)
+ **Live Demo:** [https://smartwatermanagement-35fab.web.app](https://smartwatermanagement-35fab.web.app)
 
 ---
 
@@ -20,7 +20,7 @@ A web-based **Smart Water Management Dashboard** that helps monitor and manage w
 
 ---
 
-## Project Structure
+##  Project Structure
 /index.html
 /css/style.css
 /js/main.js
@@ -28,18 +28,30 @@ A web-based **Smart Water Management Dashboard** that helps monitor and manage w
 /screenshots/
 
 
-## 🖼️ Screenshots
-*(Add your project screenshots inside `/screenshots` folder later)*  
-![Dashboard sample](screenshots/dashboard1.png)
+---
+
+##  Screenshots
+
+### General Dashboard
+![General Dashboard](screenshots/1.General_DashBoard.jpg)
+
+### Home Page
+![Home Page](screenshots/2.Home_page.jpg)
+
+### Login Page
+![Login Page](screenshots/3.Login_page.jpg)
+
+### Motor Page
+![Motor Page](screenshots/4.Motor_page.jpg)
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 1. Open `index.html` in any browser  
-2. (Optional) Configure Firebase credentials in `js/firebase-config.js` if required
+2. (Optional) Add your Firebase credentials in `js/firebase-config.js`
 
 ---
 
-## ✍️ Author
-**Ajay M B**  
-📫 GitHub: [NotAjayS](https://github.com/NotAjayS)
+##  Author
+**Ajay S**  
+ [GitHub: NotAjayS](https://github.com/NotAjayS)
