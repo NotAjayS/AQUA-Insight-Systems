@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SWMS-Home</title>
+    <link rel="stylesheet" href="homenew.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Fixed Dashboard Button -->
+<div class="home-button-container">
+  <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
+</div>
+
+<!-- Intro Animation -->
+<div id="introWrapper"><h1 id="introText">Welcome To </h1></div>
+
+<!-- Home Dashboard -->
+<div id="homeDashboard" style="display:none;">
+    <div class="home-container">
+        <h1 class="home-title" id="homeTitle">MY HOME</h1>
+        <div class="stat-grid">
+            <div class="stat-card"><canvas id="tankCapacityChart"></canvas><p>Tank Capacity</p></div>
+            <div class="stat-card"><canvas id="temperatureChart"></canvas><p>Water Temperature</p></div>
+            <div class="stat-card"><canvas id="phChart"></canvas><p>pH Level</p></div>
+            <div class="stat-card"><canvas id="tdsChart"></canvas><p>TDS Level</p></div>
+            <div class="stat-card"><canvas id="turbidityChart"></canvas><p>Turbidity</p></div>
+            <div class="stat-card"><canvas id="chlorineChart"></canvas><p>Chlorine Level</p></div>
+            <div class="stat-card"><canvas id="inflowChart"></canvas><p>Water Inflow</p></div>
+            <div class="stat-card"><canvas id="outflowChart"></canvas><p>Water Outflow</p></div>
+            <div class="stat-card"><canvas id="usageChart"></canvas><p>Total Usage Today</p></div>
+            <div class="stat-card leak-card"><div class="leak-indicator" id="leakIndicator"></div><p>Leak Detection</p></div>
+        </div>
+    </div>
+    
+</div>
+<section id="water-report">
+  <div class="water-overview">
+    <h2>📊 Today’s Water Overview</h2>
+    
+    <div class="metrics-grid">
+      <div class="metric">
+        <span>🌡️ Temperature</span>
+        <strong>26.4 °C</strong>
+        <small>+0.6°C from yesterday</small>
+      </div>
+      
+      <div class="metric">
+        <span>🧪 pH Level</span>
+        <strong>7.2</strong>
+        <small>Neutral ✅</small>
+      </div>
+      
+      <!-- Add other metrics similarly -->
+    </div>
+    
+    <div class="insights">
+      "Today, our water system is in excellent health! With crystal-clear flow and perfectly balanced pH, we’re set for a smooth supply. Keep an eye out for slight temperature changes later this evening as weather shifts.".   <br><br><br><br> 📊 Today’s Water Overview
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overall Temperature: 26.4 °C 🌡️
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overall pH Level: 7.2 (Neutral) ✅
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overall Turbidity: 2.4 NTU (Clear) 💧
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overall Dissolved Oxygen: 8.1 mg/L (Healthy) 🌿
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Overall Water Flow Rate: 3.8 L/s ⏳
+
+<br>
+<br>💡 Quick Insights
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All readings are within safe limits.
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Slight increase in water temperature compared to yesterday (+0.6 °C).
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pH remains stable — no action needed.
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Flow rate is consistent, ensuring adequate supply.
+   
+<br>
+<br>
+⚠ Alerts & Recommendations
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No contamination detected today.
+
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Continue monitoring turbidity in the afternoon.
+
+</div>
+  </div>
+</section>
+
+
+
+<!-- Add this after your charts section -->
+<section class="quality-details">
+  <h2 class="section-title">Water Quality Dashboard – Parameter Details & Safety Points</h2>
+  
+  <div class="parameter-cards">
+    <!-- 1. Tank Capacity -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/2913/2913103.png" alt="Tank Icon" class="param-icon">
+        <h3>1. Tank Capacity</h3>
+      </div>
+      <ul class="safety-points">
+        <li>Sudden drops indicate leaks or unexpected usage spikes</li>
+        <li>Overfilling may cause spillage and damage</li>
+        <li>Regularly inspect tanks and pipes</li>
+        <li>Maintain buffer level for peak demand</li>
+      </ul>
+      <div class="water-drop-animation"></div>
+    </div>
+
+    <!-- 2. Water Temperature -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3313/3313888.png" alt="Thermometer Icon" class="param-icon">
+        <h3>2. Water Temperature (°C)</h3>
+      </div>
+      <ul class="safety-points">
+        <li>High temps promote algae/bacterial growth</li>
+        <li>Low temps reduce flow and treatment efficiency</li>
+        <li>Avoid direct sunlight exposure</li>
+        <li>Use insulation to stabilize temperature</li>
+      </ul>
+      <div class="temp-gauge-animation"></div>
+    </div>
+
+    <!-- 3. pH Level -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3143/3143477.png" alt="pH Icon" class="param-icon">
+        <h3>3. pH Level</h3>
+      </div>
+      <ul class="safety-points">
+        <li>Fluctuations may indicate chemical spills or corrosion</li>
+        <li>Extreme pH harms pipes and health</li>
+        <li>Use neutralizing filters if needed</li>
+        <li>Regular monitoring ensures compliance</li>
+      </ul>
+      <div class="ph-scale-animation"></div>
+    </div>
+
+    <!-- 4. Total Dissolved Solids -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/4105/4105459.png" alt="TDS Icon" class="param-icon">
+        <h3>4. Total Dissolved Solids (TDS)</h3>
+      </div>
+      <ul class="safety-points">
+        <li>High TDS indicates salts/minerals/pollutants</li>
+        <li>Affects taste, safety and plumbing</li>
+        <li>Consider reverse osmosis if too high</li>
+        <li>Monitor changes to detect contamination</li>
+      </ul>
+      <div class="tds-animation"></div>
+    </div>
+
+    <!-- 5. Turbidity -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/4163/4163917.png" alt="Turbidity Icon" class="param-icon">
+        <h3>5. Turbidity</h3>
+      </div>
+      <ul class="safety-points">
+        <li>Spikes often precede microbial contamination</li>
+        <li>Rainfall/construction can cause increases</li>
+        <li>Continuous monitoring maintains filtration</li>
+        <li>Use settling tanks to reduce turbidity</li>
+      </ul>
+      <div class="turbidity-animation"></div>
+    </div>
+
+    <!-- 6. Chlorine Level -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/2745/2745693.png" alt="Chlorine Icon" class="param-icon">
+        <h3>6. Chlorine Level (%)</h3>
+      </div>
+      <ul class="safety-points">
+        <li>Disinfects but harmful at wrong levels</li>
+        <li>Degrades under sunlight/long distances</li>
+        <li>Maintain to prevent bacterial growth</li>
+        <li>Adjust based on demand fluctuations</li>
+      </ul>
+      <div class="chlorine-animation"></div>
+    </div>
+
+    <!-- 7. Water Inflow -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3213/3213109.png" alt="Inflow Icon" class="param-icon">
+        <h3>7. Water Inflow</h3>
+      </div>
+      <ul class="safety-points">
+        <li>Reduced inflow may indicate supply issues</li>
+        <li>Spikes can stress treatment systems</li>
+        <li>Helps detect anomalies early</li>
+        <li>Keep steady for optimal efficiency</li>
+      </ul>
+      <div class="inflow-animation"></div>
+    </div>
+
+    <!-- 8. Water Outflow -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3213/3213126.png" alt="Outflow Icon" class="param-icon">
+        <h3>8. Water Outflow</h3>
+      </div>
+      <ul class="safety-points">
+        <li>Sudden increases signal leaks</li>
+        <li>Measures actual consumption</li>
+        <li>Compare with usage statistics</li>
+        <li>Maintain valves for accuracy</li>
+      </ul>
+      <div class="outflow-animation"></div>
+    </div>
+
+    <!-- 9. Total Usage -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3132/3132693.png" alt="Usage Icon" class="param-icon">
+        <h3>9. Total Usage Today</h3>
+      </div>
+      <ul class="safety-points">
+        <li>Reveals consumption patterns</li>
+        <li>High periods indicate irrigation/industry</li>
+        <li>Encourage conservation</li>
+        <li>Forecast demand better</li>
+      </ul>
+      <div class="usage-animation"></div>
+    </div>
+
+    <!-- 10. Leak Detection -->
+    <div class="parameter-card animate">
+      <div class="card-header">
+        <img src="https://cdn-icons-png.flaticon.com/512/3043/3043834.png" alt="Leak Icon" class="param-icon">
+        <h3>10. Leak Detection</h3>
+      </div>
+      <ul class="safety-points">
+        <li>Caused by pipe wear or faulty joints</li>
+        <li>Early detection prevents water loss</li>
+        <li>Schedule regular maintenance</li>
+        <li>Combine with pressure monitoring</li>
+      </ul>
+      <div class="leak-animation"></div>
+    </div>
+  </div>
+</section>
+<!-- Your app logic -->
+<script src="homenew.js" type="module"></script>
+
+
+
+</body>
+</html>

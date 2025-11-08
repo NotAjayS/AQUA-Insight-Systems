@@ -1,0 +1,255 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f8ff;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 3em;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.support-section {
+  padding: 40px 20px;
+  max-width: 80%;
+  margin: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.support-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.narrow {
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.faq-section {
+  background: #fff;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+  background: #e6f7ff;
+}
+
+.arrow {
+  transform: rotate(0deg);
+  transition: transform 0.4s ease;
+}
+
+.faq.open .arrow {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  padding: 0 10px;
+}
+
+.faq.open .faq-answer {
+  max-height: 300px;
+  padding-top: 10px;
+}
+
+
+.content-block {
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  transition: transform 0.4s ease;
+}
+
+.content-block:hover {
+  transform: scale(1.01);
+}
+
+
+ul {
+  padding-left: 20px;
+  margin-top: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+
+.table-container {
+  overflow-x: auto;
+  animation: fadeInUp 1s ease forwards;
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.water-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
+  animation: slideInFromRight 1.2s ease-in-out;
+}
+
+.water-table thead {
+  background-color: #0099cc;
+  color: #fff;
+}
+
+.water-table th,
+.water-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.water-table tr:hover {
+  background-color: #f0fbff;
+  transform: scale(1.01);
+  transition: 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+.bullet-details {
+  margin-top: 30px;
+  padding-left: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  animation: fadeIn 1s ease-out forwards;
+  opacity: 0;
+}
+
+.bullet-details li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Optional: icon bullets */
+.bullet-details li::marker {
+  color: #2a9d8f;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.curved-loop-jacket {
+  height: 80px; /* Reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #0b0b0b; /* Simple background */
+  width: 100%;
+}
+
+.curved-loop-svg {
+  width: 100%;
+  display: block;
+  animation: moveText 15s linear infinite;
+}
+
+@keyframes moveText {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+
+.home-button-container {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.home-button-container button {
+  background-color: #00ffe5;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 255, 229, 0.4);
+}
+
+.home-button-container button:hover {
+  background-color: #0ff;
+  transform: scale(1.05);
+}

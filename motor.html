@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SWMS-Motor</title>
+  <link rel="stylesheet" href="motor.css"/>
+</head>
+<body>
+  <div class="home-button-container">
+  <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
+</div>
+
+  <div class="wrap">
+    <h2 class="title">Current Water Tank Capacity</h2>
+    <div class="tank">
+      <div class="cap"></div>
+      <div class="water">
+        <div class="liquid"></div>
+        <div class="liquid l2"></div>
+        <div class="bubbles">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="value">Tank Level: 75%</div>
+      <div class="muted">is filled..</div>
+    </div>
+
+
+        <div class="tank-text">
+      <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This water tank is part of our real-time monitoring system designed to track water levels with precision.  
+        It helps in ensuring optimal storage while preventing oooverflow and shortages.  
+        The system is integrated with sensors to provide live updates directly to this interface.  
+        By visualizing the water levels, maintenance teams can take timely actions.  
+        This promotes sustainable water usage and efficient in management.<br><br><br><br><br>
+        _________________________________________________________________________________________________________________________________________________________
+       
+      </p>
+    </div>
+<p style="font-size: 40px; color: #fff; text-shadow: 0 0 15px #0ff, 0 0 30px #0ff, 0 0 45px #0ff;"><b> Motor Control Button:</b></p>
+    <!-- Motor switch below the tank -->
+    <label class="switch">
+      <input type="checkbox" id="motorSwitch">
+      <div class="track">
+        <span class="txt on">ON</span>
+        <span class="txt off">OFF</span>
+      </div>
+      <div class="knob"></div>
+    </label>
+  </div>
+          <div class="tank-text">
+      <p>
+       <i> <b>This Switch has a real time access to your motor. If you turn this on, the motor will turn on and if you turn it off, the motor will turn off..</b></i>
+    </div>
+    <p style= "float:left; font-size:20px; margin:0; color: white;">Safety checklist:</p>
+    <div class="checklist">
+  <div class="check-item">
+    <span>Electricity available</span>
+    <span class="status tick">✔</span>
+  </div>
+  <div class="check-item">
+    <span>Device connected</span>
+    <span class="status tick">✔</span>
+  </div>
+  <div class="check-item">
+    <span>Motor overheating</span>
+    <span class="status cross">✖</span>
+  </div>
+  <div class="check-item">
+    <span>Water supply available&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <span class="status tick">✔</span>
+  </div>
+  <div class="check-item">
+    <span>Circuit breaker ON</span>
+    <span class="status tick">✔</span>
+  </div>
+  <div class="check-item">
+    <span>Maintenance OK</span>
+    <span class="status cross">✖</span>
+  </div>
+</div>
+<p style="margin: 0 120px; text-align: justify; line-height: 1.6;">
+Motor Switch Context / Description
+
+Purpose: <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The motor switch is the central control for starting or stopping the water pumping system. It ensures that the motor operates only when required, preventing unnecessary power consumption and extending the motor’s lifespan.
+
+Manual & Automated Control
+
+In manual mode, operators can switch the motor ON or OFF as needed.
+
+In automatic mode (if integrated with sensors), the motor is controlled based on water level, demand, or time schedules.
+
+Integration with Safety Features
+The motor switch is often connected to safety systems such as overload protection, dry-run prevention, and emergency shutdown to protect both the equipment and the water supply system.
+
+Location & Accessibility
+It is placed in an accessible location (control panel, dashboard, or a wall-mounted unit) so that operators can quickly control motor operations without delay.
+
+Importance in Water Management
+Efficient use of the motor switch prevents:
+
+Overpumping, which wastes energy and water.
+
+Motor overheating, which can cause damage and costly repairs.
+
+Water shortages, by ensuring timely pumping when supply is low.
+
+Indicators & Status Monitoring
+Many setups have LED indicators or dashboard status icons showing whether the motor is currently running, idle, or in a fault condition.
+
+Role in the Smart Water Management System
+In an IoT-enabled system, the motor switch can be monitored and controlled remotely via a web dashboard or mobile app, enabling real-time management from anywhere.
+
+<br><br><br><br>
+</p>
+  <script src="motor.js"></script>
+</body>
+</html>

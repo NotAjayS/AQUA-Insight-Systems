@@ -1,0 +1,245 @@
+/* Main dashboard welcome text style */
+.dashboard-main {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0;
+  animation: zoomFadeIn 2.5s forwards;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  z-index: 10;
+}
+
+/* Fade out effect */
+.fade-out {
+  animation: fadeOut 0.6s forwards;
+}
+
+/* Zoom and fade-in animation */
+@keyframes zoomFadeIn {
+  to {
+    opacity: 1.0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Fast fade-out */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* Background particles container */
+.particles-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  background: radial-gradient(ellipse at bottom, #001f3f, #000);
+}
+
+/* Individual particle style */
+.particle {
+  position: absolute;
+  background-color: rgba(0, 153, 255, 0.8); /* bright blue */
+  border-radius: 50%;
+  animation: floatUp 12s linear infinite;
+  opacity: 0.6;
+}
+
+/* Floating upward animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.animated-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: popIn 0.5s forwards;
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 2px;
+}
+
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.animated-text {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.animated-text span {
+  opacity: 0;
+  display: inline-block;
+  animation: popIn 0.5s forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Initial centered position */
+.moveable-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 1s ease, transform 1s ease;
+  font-size: 2.5rem;
+  opacity: 0;
+}
+
+/* Final top center position */
+.moveable-title.move-to-top {
+  top: 40px;
+  transform: translateX(-50%);
+}
+
+
+
+/* Dashboard Animation */
+.dashboard-animation {
+  animation: dashboardFade 3s ease-out forwards;
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+@keyframes dashboardFade {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4faff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* About Text Container - SINGLE DEFINITION */
+#aboutText {
+  position: fixed; /* Changed from absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  z-index: 1000; /* Ensure it's above particles */
+  display: none;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+#aboutText.visible {
+  display: block;
+  opacity: 1;
+}
+
+#aboutText h2 {
+  margin-top: 0;
+  color: #00ffff;
+  font-size: 2rem;
+}
+
+.description {
+  margin-bottom:75px;
+  line-height: 1.7;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.stats {
+  background: rgba(0, 150, 255, 0.15);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+#waterUsage {
+  color: #00ffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#leakStatus {
+  color: #7cfc00;
+  font-weight: bold;
+}
+
+#refreshButton {
+  background: #00aaff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 20px;
+}
+
+#refreshButton:hover {
+  background: #0088cc;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 170, 255, 0.4);
+}

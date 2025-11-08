@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWMS-yearly</title>
+  <link rel="stylesheet" href="weekly.css">
+  <link rel="stylesheet" href="null.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  
+<div class="home-button-container">
+  <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
+</div>
+
+<div class="top-boxes">
+    <div class="box" onclick="location.href='today.html'">Weekly</div>
+    <div class="box" onclick="location.href='monthly.html'">Monthly</div>
+    <div class="box" onclick="location.href='yearly.html'">Yearly</div>
+</div>
+
+<!-- Attach Styles & JS -->
+<link rel="stylesheet" href="null.css">
+<script src="null.js"></script>
+
+  <header>
+    <h1>🫧🩵 Yearly Water Quality Report</h1>
+    <p>This is a Yearly analysis of water parameters for better resource management</p>
+  </header>
+
+  <main>
+    <section class="graph-grid">
+      <div class="graph-card">
+        <h2>1. pH Levels</h2>
+        <canvas id="phChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>2. Turbidity</h2>
+        <canvas id="turbidityChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>3. Temperature (°C)</h2>
+        <canvas id="tempChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>4. Dissolved Oxygen</h2>
+        <canvas id="oxygenChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>5. Conductivity</h2>
+        <canvas id="conductivityChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>6. Salinity</h2>
+        <canvas id="salinityChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>7. Nitrate Levels</h2>
+        <canvas id="nitrateChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>8. Water Usage</h2>
+        <canvas id="usageChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+<div class="yearly-details">
+    <h2>Yearly Water Report</h2>
+    <h3>Observations</h3>
+    <ul class="observation-list">
+        <li>Total water usage this year: 145,200 liters.</li>
+        <li>Average pH level: 7.1 (Stable).</li>
+        <li>Hardness averaged 138 ppm throughout the year.</li>
+        <li>Seasonal pH variations noted during summer months.</li>
+        <li>Overall water quality within acceptable standards.</li>
+    </ul>
+
+    <h3>Recommendations</h3>
+    <ul class="recommendation-list">
+        <li>Perform a complete water system maintenance check.</li>
+        <li>Flush storage tanks and pipes before monsoon season.</li>
+        <li>Upgrade filtration system for improved efficiency.</li>
+        <li>Plan for water-saving initiatives for next year.</li>
+    </ul>
+</div>
+
+
+  <footer>
+    <p>Data represents weekly average readings — monitored by Smart Water System</p>
+  </footer>
+
+ 
+  <script src="yearly.js"></script>
+</body>
+</html>

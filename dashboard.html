@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SWMS</title>
+  <link rel="stylesheet" href="dock.css"> <!-- Your sidebar styles -->
+  <link rel="stylesheet" href="dashboard.css"> <!-- Your particle + welcome fade -->
+</head>
+<body>
+    <h1 id="dashboardTitle" class="animated-text moveable-title">MyDashboard</h1>
+
+
+
+<!-- HTML -->
+<div class="dashboard">
+  <!-- Animation Section -->
+  <div id="myDashboard" class="dashboard-animation">
+    <h1>MyDashboard</h1>
+  </div>
+
+  <!-- About Content Section -->
+  <div id="aboutText" style="display: none; opacity: 0;">
+    <h2>About our Web-Application</h2>
+    <div class="description">
+      <p> The Smart Water Monitoring System is a web-based application developed to help users track and manage their water usage efficiently. It provides real-time insights into daily, monthly, and yearly water consumption through a clean and interactive dashboard. The system is designed to detect abnormal usage patterns and send alerts in case of potential leaks or wastage.
+</p>
+    </div>
+    
+   <!-- <button id="refreshButton">Refresh Data</button>
+--> </div>
+</div>
+
+
+  <!-- Particle intro background -->
+  <div class="particles-container" id="particles-container"></div>
+
+  <!-- Welcome text -->
+  <div class="dashboard-main" id="welcomeText">
+    <h1>Welcome to Smart Water Dashboard</h1>
+  </div>
+
+  <!-- Dock Panel (Initially hidden) -->
+  <div class="dock-outer" id="dockPanel" style="display: none;">
+    <div class="dock-panel">
+
+      <div class="dock-item" data-page="homeUpdated.html">
+        <div class="dock-icon">
+          <img src="Home1.png" alt="Home">
+        </div>
+        <div class="dock-label">Home</div>
+      </div>
+
+      
+
+    <div class="dock-item"  data-page="weekly.html">
+        <div class="dock-icon">
+          <img src="report.jpg" alt="Report">
+        </div>
+        <div class="dock-label">Report</div>
+      </div>
+
+
+
+    <div class="dock-item"  data-page="motor.html">
+        <div class="dock-icon">
+          <img src="motor.avif" alt="Report">
+        </div>
+        <div class="dock-label">Motor</div>
+      </div>
+    
+
+      <div class="dock-item" data-page="contact.html">
+        <div class="dock-icon">
+          <img src="contact2.png" alt="Contact">
+        </div>
+        <div class="dock-label">Contact</div>
+      </div>
+
+      <div class="dock-item" data-page="help&support.html">
+        <div class="dock-icon">
+          <img src="helping.jpg" alt="Help & Support">
+        </div>
+        <div class="dock-label">Help & Support</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- JavaScript for particle + fade-in sidebar -->
+<script src="dashboard.js"></script>
+</body>
+
+</body>
+</html>

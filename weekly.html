@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWMS-weekly</title>
+  <link rel="stylesheet" href="weekly.css">
+  <link rel="stylesheet" href="null.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="home-button-container">
+  <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
+</div>
+<div class="top-boxes">
+    <div class="box" onclick="location.href='today.html'">Weekly</div>
+    <div class="box" onclick="location.href='monthly.html'">Monthly</div>
+    <div class="box" onclick="location.href='yearly.html'">Yearly</div>
+</div>
+
+<!-- Attach Styles & JS -->
+<link rel="stylesheet" href="null.css">
+<script src="null.js"></script>
+
+  <header>
+    <h1>🫧🩵 Weekly Water Quality Report</h1>
+    <p>This is a Weekly analysis of water parameters for better resource management</p>
+  </header>
+
+  <main>
+    <section class="graph-grid">
+      <div class="graph-card">
+        <h2>1. pH Levels</h2>
+        <canvas id="phChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>2. Turbidity</h2>
+        <canvas id="turbidityChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>3. Temperature (°C)</h2>
+        <canvas id="tempChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>4. Dissolved Oxygen</h2>
+        <canvas id="oxygenChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>5. Conductivity</h2>
+        <canvas id="conductivityChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>6. Salinity</h2>
+        <canvas id="salinityChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>7. Nitrate Levels</h2>
+        <canvas id="nitrateChart"></canvas>
+      </div>
+      <div class="graph-card">
+        <h2>8. Water Usage</h2>
+        <canvas id="usageChart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <div class="weekly-details">
+    <h2>Weekly Water Quality Summary</h2>
+    <p>
+        This week's water quality monitoring indicates stable conditions with slight fluctuations in pH and turbidity levels.
+        Temperature remained within the safe range for aquatic life, and no major contaminants were detected.
+    </p>
+
+    <h3>Key Observations:</h3>
+    <ul class="observation-list">
+        <li>Average pH: <strong>7.2</strong> — within optimal drinking standards.</li>
+        <li>Turbidity: <strong>4.5 NTU</strong> — clear and safe for use.</li>
+        <li>Temperature: <strong>22°C</strong> — ideal for aquatic ecosystems.</li>
+        <li>Chlorine Levels: <strong>0.7 mg/L</strong> — within safety limits.</li>
+    </ul>
+
+    <h3>Recommendations for the Week:</h3>
+    <ul class="recommendation-list">
+        <li>Continue regular filtration maintenance to avoid sediment build-up.</li>
+        <li>Inspect water sources for potential contamination points.</li>
+        <li>Encourage community awareness about water conservation.</li>
+        <li>Schedule next inspection for early next week to track changes.</li>
+    </ul>
+</div>
+
+
+  <footer>
+    <p>Data represents weekly average readings — monitored by Smart Water System</p>
+  </footer>
+
+  <script src="weekly.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Stack Animation</title>
+  <link rel="stylesheet" href="Home.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</head>
+<body>
+    <style>
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking-letter {
+  animation: blink 1s infinite; /* 1s duration, infinite repetition */
+  font-size: 100px;
+  color: black; 
+}
+</style>
+
+<a href="dashboard.html" class="home-button">Home</a>
+
+  <div class="scroll-stack-scroller">
+    <div class="scroll-stack-inner">
+           
+      <!-- Add this div right here -->
+      <div class="header-container">
+        <h1 class="blur-text">My Home</h1>
+      </div>
+      
+      
+
+
+
+      
+        <!-- Rest of your existing code -->
+      <div class="scroll-stack-card-wrapper">
+        <div class="scroll-stack-card" style="background-color: #ff6b6b;">
+          <h2>Tank Capacity</h2>
+          <p>The Tank is currently is <span class="blinking-letter">80% filled...</span></p>
+        </div>
+      </div>
+      
+      <div class="scroll-stack-card-wrapper">
+        <div class="scroll-stack-card" style="background-color: #48dbfb;">
+          <h2>Current pH value</h2>
+          <p>The pH value is <span class="blinking-letter">    6.5</span></p>
+        </div>
+      </div>
+      
+      <div class="scroll-stack-card-wrapper">
+        <div class="scroll-stack-card" style="background-color: #1dd1a1;">
+          <h2>Turbidity value</h2>
+          <p>The Current Turbidity value is <span class="blinking-letter">3.3<i>NTU</i></span><br> range: 0–5 NTU for drinking. </p>
+        </div>
+      </div>
+      
+      <div class="scroll-stack-card-wrapper">
+        <div class="scroll-stack-card" style="background-color: #feca57;">
+          <h2>Water Temperature-info</h2>
+          <p>The Water is currently at<span class="blinking-letter">23.3*C</span></p>
+        </div>
+      </div>
+      
+      <div class="scroll-stack-card-wrapper">
+        <div class="scroll-stack-card" style="background-color: #5f27cd;">
+          <h2>Water Quality Index (WQI)</h2>
+          <p>Aggregated score for the water currently is <span class="blinking-letter"> 8.5/10</span></p>
+        </div>
+      </div>
+      
+      <div class="scroll-stack-end"></div>
+    </div>
+
+      <!-- Previous card content... -->
+
+      <!-- Add this GRAPH SECTION right before scroll-stack-end -->
+      <div class="graph-section">
+
+
+
+
+            <div class='graph-title'>
+          <p>Today's Water Usage</p>
+          <p class="name">Line 1---> Washing<br> Line 2--->Watering Plants <br> Line 3--->Laundry</p>
+        </div>
+        <svg class='graph-svg' viewBox="0 0 529 286" preserveAspectRatio="xMidYMid meet">
+          <!-- Y-axis labels -->
+          <!-- Y-axis labels - add fill="#000000" and increase opacity -->
+                    <g class="y-axis" font-size="11" font-family="sans-serif" fill="#000000" opacity="0.8" font-weight="bold">
+  <text x="25" y="264">0</text>
+  <text x="12" y="232">200</text>
+  <text x="12" y="201">400</text>
+  <text x="12" y="169">600</text>
+  <text x="12" y="137">800</text>
+  <text x="6" y="106">1000</text>
+  <text x="6" y="74">1200</text>
+  <text x="6" y="42">1400</text>
+  <text x="6" y="11">1600</text>
+</g>
+
+<!-- X-axis labels - add fill="#000000" and increase opacity -->
+<g class="x-axis" transform="translate(72, 272)" font-size="11" font-family="sans-serif" fill="#000000" opacity="0.8" font-weight="bold">
+  <text x="0" y="11">1</text>
+  <text x="39" y="11">2</text>
+  <text x="79" y="11">3</text>
+  <text x="118" y="11">4</text>
+  <text x="158" y="11">5</text>
+  <text x="198" y="11">6</text>
+  <text x="237" y="11">7</text>
+  <text x="277" y="11">8</text>
+  <text x="317" y="11">9</text>
+  <text x="359" y="11">10</text>
+  <text x="400" y="11">11</text>
+  <text x="438" y="11">12</text>
+</g>
+          <!-- Grid lines -->
+          <g class="grid-lines" stroke="#FFFFFF" stroke-linecap="square" opacity="0.08">
+            <path d="M46,1.5 L525,1.5"/>
+            <path d="M46,33 L525,33"/>
+            <path d="M46,64.5 L525,64.5"/>
+            <path d="M46,96 L525,96"/>
+            <path d="M46,127.5 L525,127.5"/>
+            <path d="M46,159 L525,159"/>
+            <path d="M46,190.5 L525,190.5"/>
+            <path d="M46,222 L525,222"/>
+            <path d="M46,253.5 L525,253.5"/>
+          </g>
+          
+          <!-- Graph lines - EDIT THESE POINTS -->
+<g class="graph-lines" transform="translate(64, 16)" stroke-linecap="round" stroke-width="8">
+    <!-- Line 1 -->
+    <polyline class="graph-line" fill="none" stroke="#000000" points="0,1 88,1 129,137 180,137 224,182 257,91 302,137 346,91 392,91 430,179"/>
+    
+    <!-- Line 2 -->
+    <polyline class="graph-line" fill="none" stroke="#000000" points="2,183 54,227 96,47 133,1 302,1 347,45 387,0 428,43"/>
+    
+    <!-- Line 3 -->
+    <polyline class="graph-line" fill="none" stroke="#000000" points="2,180 53,180 99,91 137,47 219,47 257,90 302,47 349,137 398,137 432,91"/>
+</g>
+          
+          <!-- X-axis labels -->
+          <g class="x-axis" transform="translate(72, 272)" font-size="11" font-family="sans-serif" fill="#FFFFFF" opacity="0.4">
+            <text x="0" y="11">1</text>
+            <text x="39" y="11">2</text>
+            <text x="79" y="11">3</text>
+            <text x="118" y="11">4</text>
+            <text x="158" y="11">5</text>
+            <text x="198" y="11">6</text>
+            <text x="237" y="11">7</text>
+            <text x="277" y="11">8</text>
+            <text x="317" y="11">9</text>
+            <text x="359" y="11">10</text>
+            <text x="400" y="11">11</text>
+            <text x="438" y="11">12</text>
+          </g>
+        </svg>
+
+   <div class="water-usage-message">
+  <p id="water-usage-text"></p>
+</div>
+</div> <!-- This closes the graph-section -->
+
+<!-- pH Graph Section -->
+<div class="ph-graph-section">
+  <div class="ph-graph-container">
+    <canvas id="phChart"></canvas>
+    <div class="ph-info-box">
+      <h2>24-Hour pH Trend</h2>
+      <p>🕒 <strong>Latest pH:</strong> <span id="currentPH">7.2</span></p>
+      <p>📊 <strong>Status:</strong> <span class="status good" id="phStatus">Excellent</span></p>
+      <p>💧 <strong>Summary:</strong> Water pH has remained stable over the past 24 hours.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Water Quality Section -->
+<div class="water-quality-section">
+  <div class="quality-container">
+    <div class="quality-text-box">
+      <h2>Overall Water Quality</h2>
+      <p>📌 24-hour water quality distribution</p>
+      <p>✔️ Excellent: Ideal pH and clarity</p>
+      <p>⚠️ Moderate: Needs minor treatment</p>
+      <p>❌ Poor: Requires filtration</p>
+    </div>
+    <div class="quality-chart-box">
+      <canvas id="qualityPieChart"></canvas>
+    </div>
+  </div>
+</div>
+
+
+<!-- Temperature Graph Section -->
+<div class="temperature-section">
+  <div class="temperature-container">
+    <!-- Left: Info -->
+    <div class="temperature-info">
+      <h2>Water Temperature Trend</h2>
+      <p>This graph displays the water temperature measured every hour over the past 24 hours.</p>
+      <p>Monitoring water temperature is crucial as it affects the solubility of oxygen.</p>
+      <p>Maintaining a stable temperature range ensures safe and efficient water management.</p>
+    </div>
+    
+    <!-- Right: Graph -->
+    <div class="temperature-chart">
+      <canvas id="temperatureChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<div style="
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-left: 6px solid #0d6efd;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #212529;
+  line-height: 1.8;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+">
+  <p>
+    In an era of increasing water scarcity and pollution, smart monitoring systems like this play a vital role in preserving one of our planet’s most essential resources. By analyzing key parameters such as pH, turbidity, temperature, and overall water quality, this dashboard enables real-time insights and proactive decision-making. The visual graphs provide intuitive understanding of trends and fluctuations, allowing users to act promptly in case of abnormalities. This system is designed to scale, adapt, and evolve with the integration of live sensor feeds and IoT enhancements. Its user-friendly interface makes it accessible for both field operators and researchers. Beyond just monitoring, it encourages awareness and responsibility toward sustainable water management. This project also lays the groundwork for future automation in smart cities and agriculture. Ultimately, this initiative is a step toward ensuring clean, safe, and efficient water usage. Let’s build solutions today, for a better tomorrow.
+  </p>
+</div>
+
+
+<div class="scroll-stack-end"></div>
+
+
+  
+
+
+
+  
+
+  <script src="home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // pH Line Chart
+  const phCtx = document.getElementById('phChart').getContext('2d');
+  new Chart(phCtx, {
+    type: 'line',
+    data: {
+      labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00'],
+      datasets: [{
+        label: 'pH Level',
+        data: [7.0, 7.2, 7.5, 7.3, 7.1, 7.0],
+        borderColor: '#3498db',
+        backgroundColor: 'rgba(52, 152, 219, 0.1)',
+        tension: 0.3,
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  });
+
+  // Quality Pie Chart
+  const qualityCtx = document.getElementById('qualityPieChart').getContext('2d');
+  new Chart(qualityCtx, {
+    type: 'pie',
+    data: {
+      labels: ['Excellent', 'Moderate', 'Poor'],
+      datasets: [{
+        data: [65, 25, 10],
+        backgroundColor: ['#28a745', '#ffc107', '#dc3545']
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
+    }
+  });
+});
+
+
+
+// Temperature Chart Initialization
+function initTemperatureChart() {
+  const timeLabels = [
+    "00:00", "01:00", "02:00", "03:00", "04:00", "05:00",
+    "06:00", "07:00", "08:00", "09:00", "10:00", "11:00",
+    "12:00", "13:00", "14:00", "15:00", "16:00", "17:00",
+    "18:00", "19:00", "20:00", "21:00", "22:00", "23:00"
+  ];
+
+  const tempValues = [
+    24.2, 23.9, 23.7, 23.5, 23.4, 23.2, 23.5, 24.0, 25.1, 26.0, 26.5, 27.2,
+    28.1, 28.4, 28.0, 27.3, 26.5, 25.4, 24.8, 24.1, 23.7, 23.6, 23.5, 23.3
+  ];
+
+  const ctx = document.getElementById('temperatureChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: timeLabels,
+      datasets: [{
+        label: 'Temperature (°C)',
+        data: tempValues,
+        borderColor: '#ff5722',
+        backgroundColor: 'rgba(255, 87, 34, 0.1)',
+        tension: 0.3,
+        fill: true,
+        pointRadius: 4,
+        pointHoverRadius: 6
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false
+        }
+      },
+      scales: {
+        y: {
+          title: {
+            display: true,
+            text: '°C'
+          },
+          min: 20,
+          max: 30
+        },
+        x: {
+          title: {
+            display: true,
+            text: 'Time (24h)'
+          }
+        }
+      }
+    }
+  });
+}
+
+// Call this when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initTemperatureChart();
+});
+</script>
+</body>
+</html>
