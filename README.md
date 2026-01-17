@@ -13,10 +13,10 @@ The application showcases (simulated) real-time monitoring, dashboard analytics,
 ---
 
 ##  Tech Stack
--> HTML
--> CSS 
--> JavaScript  
--> Firebase (Hosting & Database)
+1. HTML5
+2. CSS3 
+3. JavaScript
+4. Firebase (Hosting & Database)
 
 ---
 
