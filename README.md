@@ -66,7 +66,7 @@ The application showcases (simulated) real-time monitoring, dashboard analytics,
 
 ##  How to Run
 1. Click the provided link ->https://smartwatermanagement-35fab.web.app
-2. Enter the username as " admin " and the password as ajayhari@27  
+2. Enter the username as " admin " and the password as " ajayhari@27 ".  
 3. Explore all the available options from the left side panel that has been provided.
 4. Check the realtime readings of the OH, turbidity etc values that is being readed in real time
 5. Check the monthly, weekly, yearly reports from past records of the water.
