@@ -51,16 +51,16 @@ The application showcases (simulated) real-time monitoring, dashboard analytics,
 ##  Screenshots
 
 ### General Dashboard
-![General Dashboard](screenshots/1.General_DashBoard.jpg)
+![General Dashboard]
 
 ### Home Page
-![Home Page](screenshots/2.Home_page.jpg)
+![Home Page]
 
 ### Login Page
-![Login Page](screenshots/3.Login_page.jpg)
+![Login Page]
 
 ### Motor Page
-![Motor Page](screenshots/4.Motor_page.jpg)
+![Motor Page]
 
 ---
 
